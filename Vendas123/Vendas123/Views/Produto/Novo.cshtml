@@ -1,0 +1,47 @@
+﻿@model Produto
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Novo Produto</h2>
+
+<main>
+
+    <form class="row" role="form" enctype="multipart/form-data" asp-action="Novo" method="post">
+
+        <div class="col-5">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Codigo" class="control-label"></label>
+                <input asp-for="Codigo" class="form-control" />
+                <span asp-validation-for="Codigo" class="text-danger"></span>
+            </div> 
+
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Preco" class="control-label"></label>
+                <input asp-for="Preco" class="form-control" />
+                <span asp-validation-for="Preco" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Quantidade" class="control-label"></label>
+                <textarea asp-for="Quantidade" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
+            </div>
+
+            <footer class="form-group">
+                <button class="btn btn-outline-success">GRAVAR</button>
+            </footer>
+        </div>
+
+    </form>
+
+</main>

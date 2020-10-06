@@ -1,0 +1,12 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem Vindo!</h1>
+    <a asp-action="Novo" asp-controller="Produto" id="novo-flutuante">
+        <p class="plus">Adicionar Produto</p>
+        @Html.ActionLink("Adicionar Produto", "Novo", "Produto", null, new { @class = "btn btn-primary" })
+    </a>
+</div>
